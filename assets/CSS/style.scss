@@ -35,10 +35,11 @@ html {
     box-sizing: border-box;
     border: 1px solid gray;
     display: flex;
+    flex: 1 0 30%;
     flex-direction: column;
     margin: 10px;
-    max-height: 480px;
-    max-width: 240px;
+    // max-height: 480px;
+    // max-width: 240px;
 
     &__prod-img {
         max-width: 100%;
@@ -48,18 +49,19 @@ html {
         align-items: center;
         display: flex;
         flex-direction: column;
+        // flex: 1 0 25%;
         justify-content: space-between;
-        height: 120px;
+        // height: 120px;
     }
 
     &__prod-name {
-        font-size: 18px;
+        font-size: 1em;
         margin: 0.4em;
         text-align: center;
     }
 
     &__prod-price {
-        font-size: 18px;
+        font-size: 1em;
         margin: 5px 0;
     }
 
@@ -76,7 +78,7 @@ html {
     }
 
     &__stat-label {
-        font-size: 14px;
+        font-size: 0.8em;
         background-color: green;
         color: whitesmoke;
         border-radius: 5%;
@@ -99,5 +101,11 @@ html {
 @media (prefers-color-scheme: dark) {
     .page {
         @include themedark;
+    }
+}
+
+@media (max-width: 780px) {
+    html {
+        font-size: 14px;
     }
 }

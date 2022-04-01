@@ -24,10 +24,9 @@ html {
   box-sizing: border-box;
   border: 1px solid gray;
   display: flex;
+  flex: 1 0 30%;
   flex-direction: column;
   margin: 10px;
-  max-height: 480px;
-  max-width: 240px;
 }
 
 .prod-cont__prod-img {
@@ -39,17 +38,16 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 120px;
 }
 
 .prod-cont__prod-name {
-  font-size: 18px;
+  font-size: 1em;
   margin: 0.4em;
   text-align: center;
 }
 
 .prod-cont__prod-price {
-  font-size: 18px;
+  font-size: 1em;
   margin: 5px 0;
 }
 
@@ -66,7 +64,7 @@ html {
 }
 
 .prod-cont__stat-label {
-  font-size: 14px;
+  font-size: 0.8em;
   background-color: green;
   color: whitesmoke;
   border-radius: 5%;
@@ -90,5 +88,11 @@ html {
   .page {
     background-color: #222;
     color: #ffffff;
+  }
+}
+
+@media (max-width: 780px) {
+  html {
+    font-size: 14px;
   }
 }
