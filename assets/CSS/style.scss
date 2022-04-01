@@ -1,15 +1,7 @@
 .gallery {
-    display: flex;
-    // align-content: center;
-
-    // flex-wrap: wrap;
-    // justify-content: center;
-
-
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
-        // justify-content: flex-start;
     }
 }
 
@@ -36,14 +28,10 @@ html {
 .page {
     max-width: 1070px;
     margin: auto;
-    background-color: #ffffff;
-    color: #222;
+    @include themelight;
 }
 
-
-
 .prod-cont {
-    align-items: center;
     box-sizing: border-box;
     border: 1px solid gray;
     display: flex;
@@ -76,7 +64,6 @@ html {
     }
 
     &__stat-img {
-        vertical-align: baseline;
         position: relative;
     }
 
@@ -84,7 +71,6 @@ html {
         align-items: flex-start;
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
         position: absolute;
         top: 0px;
     }
