@@ -24,7 +24,7 @@ html {
   box-sizing: border-box;
   border: 1px solid gray;
   display: flex;
-  flex: 0 0 calc(28% - 4em);
+  flex: 0 1 calc(28% - 4em);
   flex-direction: column;
   margin: 1em;
 }
