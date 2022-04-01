@@ -14,6 +14,7 @@ html {
 }
 
 .page {
+  font-family: 'Open Sans', sans-serif;
   max-width: 970px;
   margin: auto;
   background-color: #ffffff;
@@ -26,6 +27,7 @@ html {
   display: flex;
   flex: 0 1 calc(28% - 4em);
   flex-direction: column;
+  justify-content: space-between;
   margin: 1em;
 }
 
@@ -37,18 +39,19 @@ html {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .prod-cont__prod-name {
   font-size: 1em;
-  margin: 0.4em;
+  margin: auto;
   text-align: center;
 }
 
 .prod-cont__prod-price {
   font-size: 1em;
   margin: 5px 0;
+  border-top: 2px solid green;
+  padding-top: 1em;
 }
 
 .prod-cont__stat-img {

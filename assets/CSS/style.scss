@@ -27,6 +27,7 @@ html {
 }
 
 .page {
+    font-family: 'Open Sans', sans-serif;
     max-width: 970px;
     margin: auto;
     @include themelight;
@@ -38,6 +39,7 @@ html {
     display: flex;
     flex: 0 1 calc(28% - 4em);
     flex-direction: column;
+    justify-content: space-between;
     margin: 1em;
 
     &__prod-img {
@@ -48,18 +50,19 @@ html {
         align-items: center;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
 
     &__prod-name {
         font-size: 1em;
-        margin: 0.4em;
+        margin: auto;
         text-align: center;
     }
 
     &__prod-price {
         font-size: 1em;
         margin: 5px 0;
+        border-top: 2px solid green;
+        padding-top: 1em;
     }
 
     &__stat-img {
