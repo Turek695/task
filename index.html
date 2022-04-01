@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/style.min.css">
+    </link>
+    <script src="assets/JS/jquery-3.6.0.min.js"></script>
+    <title>Shop Gallery - Sky-Shop</title>
+</head>
+
+<body class="page">
+    <main class="page-content">
+        <h1 class="h1">Galeria</h1>
+        <label for="stat-sel">Status filter:</label>
+        <select name="statuses" id="stat-sel" class="status-sel">
+            <option selected value="all">All</option>
+            <option value="promotion">Promotion</option>
+            <option value="recommended">Recommended</option>
+            <option value="new">New</option>
+            <option value="bestseller">bestseller</option>
+            <option value="saleout">saleout</option>
+        </select>
+        <div class="gallery">
+            <div class="gallery__wrapper">
+                <div class="prod-cont">
+                    <div class="prod-cont__stat-img">
+                        <div class="prod-cont__stats-cont">
+                            <h4 class="prod-cont__stat-label">promotion</h4>
+                            <h4 class="prod-cont__stat-label">recommended</h4>
+                            <h4 class="prod-cont__stat-label">new</h4>
+                            <h4 class="prod-cont__stat-label">bestseller</h4>
+                            <h4 class="prod-cont__stat-label">saleout</h4>
+                        </div>
+                        <img class="prod-cont__prod-img" src="assets/pictures/placeholder.jpg" alt="product image">
+                    </div>
+                    <div class="prod-cont__name-price">
+                        <h3 class="prod-cont__prod-name">product name</h3>
+                        <span class="prod-cont__prod-price">129,99 zł</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/JS/app.min.js"></script>
+</body>
+
+</html>
