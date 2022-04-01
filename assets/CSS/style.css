@@ -10,11 +10,11 @@ html {
 }
 
 .h1 {
-  font-size: 32px;
+  font-size: 2em;
 }
 
 .page {
-  max-width: 1070px;
+  max-width: 970px;
   margin: auto;
   background-color: #ffffff;
   color: #222;
@@ -24,9 +24,9 @@ html {
   box-sizing: border-box;
   border: 1px solid gray;
   display: flex;
-  flex: 1 0 30%;
+  flex: 0 0 calc(28% - 4em);
   flex-direction: column;
-  margin: 10px;
+  margin: 1em;
 }
 
 .prod-cont__prod-img {
@@ -91,8 +91,14 @@ html {
   }
 }
 
-@media (max-width: 780px) {
-  html {
-    font-size: 14px;
+@media (max-width: 768px) {
+  .prod-cont {
+    flex: 0 1 calc(35% - 3em);
+  }
+}
+
+@media (max-width: 440px) {
+  .prod-cont {
+    flex: 0 1 calc(50% - 2em);
   }
 }
