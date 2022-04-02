@@ -11,6 +11,7 @@ html {
 
 .h1 {
   font-size: 2em;
+  margin: 1rem;
 }
 
 .page {
@@ -39,18 +40,21 @@ html {
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding: 1em;
 }
 
 .prod-cont__prod-name {
+  height: 4em;
   font-size: 1em;
-  margin: auto;
+  margin-top: auto;
   text-align: center;
 }
 
 .prod-cont__prod-price {
-  font-size: 1em;
-  margin: 5px 0;
   border-top: 2px solid green;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 5px 0;
   padding-top: 1em;
 }
 
@@ -63,7 +67,8 @@ html {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 0px;
+  top: 0.5em;
+  left: 0.5em;
 }
 
 .prod-cont__stat-label {
@@ -71,13 +76,17 @@ html {
   background-color: green;
   color: whitesmoke;
   border-radius: 5%;
-  margin: 0.2em;
+  margin: 0.3em;
   padding: 0.2em 0.4em;
   text-transform: capitalize;
 }
 
 .status-sel {
-  display: inline-block;
+  margin: 1rem;
+}
+
+.status-sel__label {
+  margin: 1rem;
 }
 
 @media (prefers-color-scheme: light) {

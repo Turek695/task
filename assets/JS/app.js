@@ -1,7 +1,6 @@
 $("#stat-sel").change(function () {
     let chosenStat = $(this).find(":selected").text();
     chosenStat = chosenStat.toLowerCase();
-    console.log(chosenStat);
     showProds(products, chosenStat);
 });
 
@@ -34,9 +33,7 @@ let showProds = function (products, filter = "all") {
     } else {
         $.each(products, function (i, product) {
             if (product.prod_status && product.prod_status.includes(filter)) { // check if item is not empty
-                // if (product.prod_status.includes(filter)) {
                 makeProdCont(product);
-                // }
             }
         });
     };

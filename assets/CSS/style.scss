@@ -14,6 +14,7 @@ html {
 
 .h1 {
     font-size: 2em;
+    margin: 1rem;
 }
 
 @mixin themelight {
@@ -50,18 +51,21 @@ html {
         align-items: center;
         display: flex;
         flex-direction: column;
+        padding: 1em;
     }
 
     &__prod-name {
+        height: 4em;
         font-size: 1em;
-        margin: auto;
+        margin-top: auto;
         text-align: center;
     }
 
     &__prod-price {
-        font-size: 1em;
-        margin: 5px 0;
         border-top: 2px solid green;
+        font-size: 1em;
+        font-weight: 500;
+        margin: 5px 0;
         padding-top: 1em;
     }
 
@@ -73,8 +77,10 @@ html {
         align-items: flex-start;
         display: flex;
         flex-direction: column;
+
         position: absolute;
-        top: 0px;
+        top: 0.5em;
+        left: 0.5em;
     }
 
     &__stat-label {
@@ -82,14 +88,19 @@ html {
         background-color: green;
         color: whitesmoke;
         border-radius: 5%;
-        margin: 0.2em;
+        margin: 0.3em;
         padding: 0.2em 0.4em;
         text-transform: capitalize;
     }
 }
 
 .status-sel {
-    display: inline-block;
+    // display: inline-block;
+    margin: 1rem;
+
+    &__label {
+        margin: 1rem;
+    }
 }
 
 @media (prefers-color-scheme: light) {
