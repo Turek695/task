@@ -28,7 +28,7 @@ html {
 
 .page {
     font-family: 'Open Sans', sans-serif;
-    max-width: 970px;
+    max-width: 1360px;
     margin: auto;
     @include themelight;
 }
@@ -37,7 +37,7 @@ html {
     box-sizing: border-box;
     border: 1px solid gray;
     display: flex;
-    flex: 0 1 calc(28% - 4em);
+    flex: 0 1 calc(27% - 4em);
     flex-direction: column;
     justify-content: space-between;
     margin: 1em;
@@ -104,14 +104,20 @@ html {
     }
 }
 
+@media (max-width: 1024px) {
+    .prod-cont {
+        flex: 0 1 calc(34% - 3em);
+    }
+}
+
 @media (max-width: 768px) {
     .prod-cont {
-        flex: 0 1 calc(35% - 3em);
+        flex: 0 1 calc(50% - 2em);
     }
 }
 
 @media (max-width: 440px) {
     .prod-cont {
-        flex: 0 1 calc(50% - 2em);
+        flex: 0 1 calc(100% - 1em);
     }
 }
