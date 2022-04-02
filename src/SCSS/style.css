@@ -1,3 +1,16 @@
+.footer,
+.header {
+  background-color: #232222;
+  color: #f5f5f5;
+  width: 100%;
+}
+
+.footer__paragraph,
+.header__paragraph {
+  margin: 0;
+  padding: 1em;
+}
+
 .gallery__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -7,6 +20,8 @@ html {
   min-width: 100%;
   min-height: 100%;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
 .h1 {
@@ -16,15 +31,19 @@ html {
 
 .page {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #232222;
+}
+
+.page-content {
   max-width: 1360px;
   margin: auto;
-  background-color: #f5f5f5;
-  color: #232222;
 }
 
 .prod-cont {
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: #fff;
   display: flex;
   flex: 0 1 calc(27% - 4em);
   flex-direction: column;
@@ -74,7 +93,7 @@ html {
 .prod-cont__stat-label {
   font-size: 0.8em;
   background-color: green;
-  color: whitesmoke;
+  color: #f5f5f5;
   border-radius: 5%;
   margin: 0.3em;
   padding: 0.2em 0.4em;

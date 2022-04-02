@@ -18,7 +18,7 @@ let makeProdCont = function (prod) {
             });
         };
     };
-    $("<img class='prod-cont__prod-img' src='assets/pictures/placeholder.jpg' alt='product image'>").appendTo($(".prod-cont__stat-img:last"));
+    $("<img class='prod-cont__prod-img' loading='auto' src='assets/images/placeholder.png' alt='product image'>").appendTo($(".prod-cont__stat-img:last"));
     $("<div class='prod-cont__name-price'></div>").appendTo(".prod-cont:last");
     $(`<h3 class='prod-cont__prod-name'>${prod.prod_name}</h3 >`).appendTo($(".prod-cont__name-price:last"));
     $(`<span class='prod-cont__prod-price'>${prod.prod_price} zł</span>`).appendTo($(".prod-cont__name-price:last"));
