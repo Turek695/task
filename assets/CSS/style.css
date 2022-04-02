@@ -18,13 +18,12 @@ html {
   font-family: 'Open Sans', sans-serif;
   max-width: 1360px;
   margin: auto;
-  background-color: #ffffff;
-  color: #222;
+  background-color: #f9f9f9;
+  color: #232222;
 }
 
 .prod-cont {
   box-sizing: border-box;
-  border: 1px solid gray;
   display: flex;
   flex: 0 1 calc(27% - 4em);
   flex-direction: column;
@@ -87,20 +86,6 @@ html {
 
 .status-sel__label {
   margin: 1rem;
-}
-
-@media (prefers-color-scheme: light) {
-  .page {
-    background-color: #ffffff;
-    color: #222;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    background-color: #222;
-    color: #ffffff;
-  }
 }
 
 @media (max-width: 1024px) {
