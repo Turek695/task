@@ -2,19 +2,9 @@ const srcFile = "./products.json";
 var products = [];
 var productsQty = 0;
 var productsIndex = 0;
-var chosenStat = 'all'
-$.getJSON(srcFile, {
-})
-    .done(function (data) {
-        products = data;
-        productsQty = Object.keys(products).length - 2;
-        $(".gallery__wrapper").empty();
-        showProducts(products, chosenStat, productsIndex);
-        lastContainerObserver.observe(document.querySelector(".prod-cont:last-child"));
-    })
-    .fail(function () {
-        alert('Ajax call failed.');
-    });
+var chosenStat = 'all';
+
+
 
 $("#stat-sel").change(function () {
     chosenStat = $(this).find(":selected").text();
@@ -26,27 +16,38 @@ $("#stat-sel").change(function () {
 
 });
 
+fetchProducts = async () => {
+    try {
+        const res = await fetch(srcFile);
+        products = await res.json();
+        productsQty = Object.keys(products).length - 2;
+        $(".gallery__wrapper").empty();
+        showProducts(products, chosenStat, productsIndex);
+        lastContainerObserver.observe(document.querySelector(".prod-cont:last-child"));
+    } catch (e) {
+        console.log('ERROR!!', e);
+    }
+};
+
+fetchProducts();
+
 function showProducts(products, filter = "all", index) {
     let lazyCounter = 0;
     if (filter == "all") { // if there is "all" - no filter selected
         for (index; index <= productsQty; index++) {
-            console.log(index, productsQty)
             makeProductContainer(products[index]);
             lazyCounter += 1;
             if (lazyCounter >= 12 || index == productsQty) {
-                console.log(`productsIndex = ${index + 1}`)
                 return productsIndex = index + 1; //change starting point for next
             }
         };
     } else { // if there is a filter selected
         for (index; index <= productsQty; index++) {
             if (products[index].prod_status && products[index].prod_status.includes(filter)) { // check if item is not empty
-                console.log(index, productsQty)
                 makeProductContainer(products[index]);
                 lazyCounter += 1;
             };
             if (lazyCounter >= 12 || index == productsQty) {
-                console.log(`productsIndex = ${index + 1}`)
                 return productsIndex = index + 1; //change starting point for next
             }
         };
@@ -83,5 +84,5 @@ const lastContainerObserver = new IntersectionObserver(entries => {
     {
         root: null,
         threshold: 0,
-        // rootMargin: 0%;
+        rootMargin: '0px 0px 0px 0px'
     })
