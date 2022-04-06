@@ -4,18 +4,6 @@ var productsQty = 0;
 var productsIndex = 0;
 var chosenStat = 'all';
 
-
-
-$("#stat-sel").change(function () {
-    chosenStat = $(this).find(":selected").text();
-    chosenStat = chosenStat.toLowerCase();
-    productsIndex = 0;
-    $(".gallery__wrapper").empty();
-    showProducts(products, chosenStat, productsIndex);
-    lastContainerObserver.observe(document.querySelector(".prod-cont:last-child"));
-
-});
-
 fetchProducts = async () => {
     try {
         const res = await fetch(srcFile);
@@ -30,6 +18,16 @@ fetchProducts = async () => {
 };
 
 fetchProducts();
+
+$("#stat-sel").change(function () {
+    chosenStat = $(this).find(":selected").text();
+    chosenStat = chosenStat.toLowerCase();
+    productsIndex = 0;
+    $(".gallery__wrapper").empty();
+    showProducts(products, chosenStat, productsIndex);
+    lastContainerObserver.observe(document.querySelector(".prod-cont:last-child"));
+
+});
 
 function showProducts(products, filter = "all", index) {
     let lazyCounter = 0;
